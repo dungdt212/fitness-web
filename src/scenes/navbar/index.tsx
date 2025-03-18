@@ -1,6 +1,6 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { SelectedPage } from '@/shared/types';
-import Logo from "@/assets/logo1.png";
+import Logo from "@/assets/Logo.png";
 import Link from "./Link"
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { useState } from "react";
@@ -18,6 +18,7 @@ const Navbar = ( {isTopOfPage, selectedPage, setSelectedPage}: Props ) => {
 
   const [isMenuToogled, setIsMenuToogled] = useState<boolean>(false);
   const navbarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
+  
   return <nav>
     <div className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6`}>
       <div className={`${flexBetween} mx-auto w-5/6`}>
@@ -29,14 +30,14 @@ const Navbar = ( {isTopOfPage, selectedPage, setSelectedPage}: Props ) => {
           
           {isAboveMediumScreens ? (
             <div className={`${flexBetween} w-full`}>
-              <div className={`${flexBetween} gap-10 text-sm`}>
+              <div className={`${flexBetween} gap-10 fontsize-20px`}>
                 <Link 
                   page="Home" 
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                   />
                 <Link 
-                  page="Benefit" 
+                  page="Benefits" 
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                   />
@@ -73,7 +74,7 @@ const Navbar = ( {isTopOfPage, selectedPage, setSelectedPage}: Props ) => {
 
     {/* MOBILE MENU MODAL */}
     {!isAboveMediumScreens && isMenuToogled && (
-      <div className="fixed right-0 top-0 z-40 h-full w-[300px] bg-primary-100 drop-shadow-xl">
+      <div className="fixed right-0 top-0 z-40 h-full w-[250px] bg-pink-200 drop-shadow-xl">
         {/* CLOSE ICON */}
         <div className="flex justify-end p-12">
           <button onClick={() =>setIsMenuToogled(!isMenuToogled)}>
@@ -88,7 +89,7 @@ const Navbar = ( {isTopOfPage, selectedPage, setSelectedPage}: Props ) => {
             setSelectedPage={setSelectedPage}
             />
           <Link 
-            page="Benefit" 
+            page="Benefits" 
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
             />

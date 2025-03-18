@@ -52,3 +52,5 @@ export default tseslint.config({
   },
 })
 ```
+## 🎥 Demo Video  
+[![Watch the video](https://img.youtube.com/vi/a5fmigeqqC0/maxresdefault.jpg)](https://www.youtube.com/watch?v=a5fmigeqqC0)

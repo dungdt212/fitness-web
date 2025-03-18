@@ -52,4 +52,5 @@ export default tseslint.config({
   },
 })
 ```
-[Demo Video](demo.mp4)
+## 🎥 Demo Video  
+[![Watch the video](https://www.youtube.com/watch?v=a5fmigeqqC0)]
